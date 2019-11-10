@@ -1,0 +1,153 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=8300, tid=16092
+#
+# JRE version:  (8.0_60-b27) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.60-b23 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002c19800):  JavaThread "Unknown thread" [_thread_in_vm, id=16092, stack(0x0000000002b10000,0x0000000002c10000)]
+
+Stack: [0x0000000002b10000,0x0000000002c10000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002c19800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=16092, stack(0x0000000002b10000,0x0000000002c10000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5f00000, 0x00000000d8980000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5f00000,0x00000000d5fa6670,0x00000000d7f80000)
+  from space 5120K, 0% used [0x00000000d8480000,0x00000000d8480000,0x00000000d8980000)
+  to   space 5120K, 0% used [0x00000000d7f80000,0x00000000d7f80000,0x00000000d8480000)
+ ParOldGen       total 87552K, used 0K [0x0000000081c00000, 0x0000000087180000, 0x00000000d5f00000)
+  object space 87552K, 0% used [0x0000000081c00000,0x0000000081c00000,0x0000000087180000)
+ Metaspace       used 767K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x00000000120d0000,0x00000000124d0000] byte_map_base: 0x0000000011cc2000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006380a5b0
+ Begin Bits: [0x0000000012f80000, 0x0000000014f10000)
+ End Bits:   [0x0000000014f10000, 0x0000000016ea0000)
+
+Polling page: 0x0000000001160000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002d10000, 0x0000000002f80000, 0x0000000011d10000]
+ total_blobs=57 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.039 loading class java/lang/Short
+Event: 0.039 loading class java/lang/Short done
+Event: 0.039 loading class java/lang/Integer
+Event: 0.039 loading class java/lang/Integer done
+Event: 0.039 loading class java/lang/Long
+Event: 0.039 loading class java/lang/Long done
+Event: 0.040 loading class java/lang/NullPointerException
+Event: 0.040 loading class java/lang/NullPointerException done
+Event: 0.040 loading class java/lang/ArithmeticException
+Event: 0.040 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff708bc0000 - 0x00007ff708bf7000 	C:\Program Files\Java\jdk1.8.0_60\bin\javaw.exe
+0x00007ff887da0000 - 0x00007ff887f81000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff885410000 - 0x00007ff8854c1000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff8847e0000 - 0x00007ff884a53000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff885ee0000 - 0x00007ff885f81000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff887cc0000 - 0x00007ff887d5e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff887930000 - 0x00007ff88798b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff885f90000 - 0x00007ff8860b4000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff885220000 - 0x00007ff8853b0000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8842c0000 - 0x00007ff8842e0000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff887a40000 - 0x00007ff887a68000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff8845a0000 - 0x00007ff884731000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff884740000 - 0x00007ff8847df000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff884160000 - 0x00007ff884258000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff871e80000 - 0x00007ff8720e9000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1067_none_d401a3eb7c8ebdea\COMCTL32.dll
+0x00007ff887600000 - 0x00007ff887921000 	C:\WINDOWS\System32\combase.dll
+0x00007ff8844d0000 - 0x00007ff884549000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff885eb0000 - 0x00007ff885edd000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000000064d10000 - 0x0000000064de2000 	C:\Program Files\Java\jdk1.8.0_60\jre\bin\msvcr100.dll
+0x0000000063000000 - 0x0000000063889000 	C:\Program Files\Java\jdk1.8.0_60\jre\bin\server\jvm.dll
+0x00007ff887d60000 - 0x00007ff887d68000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff871090000 - 0x00007ff871099000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff880320000 - 0x00007ff880343000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff87ea40000 - 0x00007ff87ea4a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff887c20000 - 0x00007ff887c8c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff8802f0000 - 0x00007ff88031a000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ff884550000 - 0x00007ff884599000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x0000000064d00000 - 0x0000000064d0f000 	C:\Program Files\Java\jdk1.8.0_60\jre\bin\verify.dll
+0x0000000064cd0000 - 0x0000000064cf9000 	C:\Program Files\Java\jdk1.8.0_60\jre\bin\java.dll
+0x0000000064cb0000 - 0x0000000064cc6000 	C:\Program Files\Java\jdk1.8.0_60\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=7080 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -Xverify:none -XX:TieredStopAtLevel=1 -Dfile.encoding=UTF-8 
+java_command: com.esprit.getaway.ApiGatewayApplication
+java_class_path (initial): C:\Users\Achraf\eclipse-workspace\projet-microservices\APIGateway\target\classes;C:\Users\Achraf\.m2\repository\org\springframework\cloud\spring-cloud-starter-config\2.2.0.RC1\spring-cloud-starter-config-2.2.0.RC1.jar;C:\Users\Achraf\.m2\repository\org\springframework\cloud\spring-cloud-starter\2.2.0.RC1\spring-cloud-starter-2.2.0.RC1.jar;C:\Users\Achraf\.m2\repository\org\springframework\cloud\spring-cloud-context\2.2.0.RC1\spring-cloud-context-2.2.0.RC1.jar;C:\Users\Achraf\.m2\repository\org\springframework\security\spring-security-crypto\5.2.1.RELEASE\spring-security-crypto-5.2.1.RELEASE.jar;C:\Users\Achraf\.m2\repository\org\springframework\cloud\spring-cloud-commons\2.2.0.RC1\spring-cloud-commons-2.2.0.RC1.jar;C:\Users\Achraf\.m2\repository\org\springframework\security\spring-security-rsa\1.0.7.RELEASE\spring-security-rsa-1.0.7.RELEASE.jar;C:\Users\Achraf\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.60\bcpkix-jdk15on-1.60.jar;C:\Users\Achraf\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.60\bcprov-jdk15on-1.60.jar;C:\Users\Achraf\.m2\repository\org\springframework\cloud\spring-cloud-config-client\2.2.0.RC1\spring-cloud-config-client-2.2.0.RC1.jar;C:\Users\Achraf\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.2.1.RELEASE\spring-boot-autoconfigure-2.2.1.RELEASE.jar;C:\Users\Achraf\.m2\repository\org\springframework\spring-web\5.2.1.RELEASE\spring-web-5.2.1.RELEASE.jar;C:\Users\Achraf\.m2\repository\org\springframework\spring-beans\5.2.1.RELEASE\spring-beans-5.2.1.RELEASE.jar;C:\Users\Achraf\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.0\jackson-annotations-2.10.0.jar;C:\Users\Achraf\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.0\jackson-databind-2.10.0.jar;C:\Users\Achraf\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.0\jackson-core-2.10.0.jar;C:\Users\Achraf\.m2\repository\org\springframework\cloud\spring-cloud-starter-netflix-eureka-client\2.2.0.RC1\spr
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_60
+USERNAME=Achraf
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17134 (10.0.17134.753)
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8268796k(1047728k free), swap 12201760k(6092k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.60-b23) for windows-amd64 JRE (1.8.0_60-b27), built on Aug  4 2015 11:06:27 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sun Nov 10 17:43:19 2019
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
