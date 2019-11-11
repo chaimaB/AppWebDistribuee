@@ -3,7 +3,6 @@ var router = express.Router();
 var os = require('os');
 
 var networkInt = os.networkInterfaces();
-console.log(networkInt);
 //var localIp =  networkInt.Ethernet[1].address;//windows
 //var localIp =  networkInt.eth0[0].address; //linux
 
