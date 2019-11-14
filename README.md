@@ -24,6 +24,7 @@ URI for gateway : http://localhost:8762
 >mvn clean package : to build
 >docker-compose up --build : build docker images and containers and run containers
 >docker-compose stop : stop the dockerized services
+
 Each maven module has a Dockerfile.
 
 In docker-compose.yml file:
