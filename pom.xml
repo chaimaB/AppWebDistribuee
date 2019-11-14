@@ -30,5 +30,8 @@
   <modules>
 		<module>APIGateway</module>
 		<module>Eureka</module>
+        <module>Ressources-Humaines</module>
+        <module>Materiels-microservice</module>
+        <module>service-project</module>
 	</modules>
 </project>
