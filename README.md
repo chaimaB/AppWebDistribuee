@@ -21,9 +21,11 @@ Authentification	/node-service/
 URI for gateway : http://localhost:8762
 
 ### Build & Run ###
-- *>mvn clean package* : to build
-- *>docker-compose up* --build : build docker images and containers and run containers
-- *>docker-compose stop* : stop the dockerized services
+
+In repository /build/docker run :
+
+- *>sudo ./deploy.sh* : build docker images and containers and run containers
+- *>sudo ./clean.sh* : stop the dockerized services
 
 **Each maven module has a Dockerfile.**
 
