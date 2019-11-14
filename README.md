@@ -4,15 +4,15 @@ Projet application web distribuée.
 SPRING BOOT MICROCSERVICE USING SPRING, EUREKA, ZUUL, DOCKER
 This project is created to get experience on Microservices. This is a simple project for projects managment.
 
-There are four microservices:
+**There are four microservices:**
 HR : This microservice is responsible for managing employes and developped in spring boot.
 Equipment : This microservice is responsible for managing equipments and developped in spring boot.
 Project : This microservice is responsible for managing projects and developped in spring boot.
 Client : This microservice is responsible for managing clients and developped in spring boot.
 Authentification : This microservice is responsible for the authentification and developped in nodeJs.
 
-#Gateways
-Service	EndPoint
+### Gateways ###
+ **Service	EndPoint**
 HR	/hr-service/
 Equipment	/matereiels-service/
 Project	/project-service/
@@ -20,14 +20,14 @@ Client	/client-service/
 Authentification	/node-service/
 URI for gateway : http://localhost:8762
 
-#Build & Run
->mvn clean package : to build
->docker-compose up --build : build docker images and containers and run containers
->docker-compose stop : stop the dockerized services
+### Build & Run ###
+- *>mvn clean package* : to build
+- *>docker-compose up* --build : build docker images and containers and run containers
+- *>docker-compose stop* : stop the dockerized services
 
-Each maven module has a Dockerfile.
+**Each maven module has a Dockerfile.**
 
-In docker-compose.yml file:
+## In docker-compose.yml file:
 
  *HR Service : 8880 port is mapped to 7500 port of host
  *Equipment Service : 8700 port is mapped to 7501 port of host
