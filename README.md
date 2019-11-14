@@ -1,7 +1,7 @@
 # AppWebDistribuee
 Projet application web distribuée.
 
-SPRING BOOT MICROCSERVICE USING SPRING, EUREKA, ZUUL, DOCKER
+SPRING BOOT MICROCSERVICE USING SPRING BOOT, NODEJS, EUREKA, ZUUL, DOCKER
 This project is created to get experience on Microservices. This is a simple project for projects managment.
 
 **There are four microservices:**
