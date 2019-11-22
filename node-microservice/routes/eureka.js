@@ -10,11 +10,10 @@ const Eureka = require('eureka-js-client').Eureka;
 
 const eureka = new Eureka({
     instance: {
-        id:'node-service',
         app: 'node-service',
         hostName: 'localhost',
-        instanceId:'nodeService',
         ipAddr: '172.0.0.1',
+      preferIpAddress :'true',
         statusPageUrl: 'http://'+'localhost'+':3000/',
         port: {
             '$': 3000,
@@ -24,12 +23,14 @@ const eureka = new Eureka({
         dataCenterInfo: {
             '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
             name: 'MyOwn',
-        }
+        },
     },
     eureka: {
-        host: 'localhost',
+        host: 'eureka',
         port: 8761,
-        servicePath: '/eureka/apps/'
+        servicePath: '/eureka/apps/',
+maxRetries: 10,
+      requestRetryDelay: 2000
     }
 });
 eureka.logger.level('debug');

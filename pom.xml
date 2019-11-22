@@ -33,5 +33,6 @@
         <module>Ressources-Humaines</module>
         <module>Materiels-microservice</module>
         <module>service-project</module>
+        <module>Client</module>
 	</modules>
 </project>
